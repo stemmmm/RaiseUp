@@ -78,6 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				7B8013C829CBECD100A8CEAD /* RaiseUp */,
+				7B8013FB29CBF22400A8CEAD /* Resources */,
+				7B8013FA29CBF03500A8CEAD /* Tests */,
 				7B8013C729CBECD100A8CEAD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,10 +100,6 @@
 				7B8013C929CBECD100A8CEAD /* AppDelegate.swift */,
 				7B8013CB29CBECD100A8CEAD /* SceneDelegate.swift */,
 				7B8013CD29CBECD100A8CEAD /* ViewController.swift */,
-				7B8013D229CBECD200A8CEAD /* Assets.xcassets */,
-				7B8013D429CBECD200A8CEAD /* LaunchScreen.storyboard */,
-				7B8013D729CBECD200A8CEAD /* Info.plist */,
-				7B8013FA29CBF03500A8CEAD /* Tests */,
 			);
 			path = RaiseUp;
 			sourceTree = "<group>";
@@ -130,6 +128,16 @@
 				7B8013E929CBECD200A8CEAD /* RaiseUpUITests */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		7B8013FB29CBF22400A8CEAD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7B8013D229CBECD200A8CEAD /* Assets.xcassets */,
+				7B8013D429CBECD200A8CEAD /* LaunchScreen.storyboard */,
+				7B8013D729CBECD200A8CEAD /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
