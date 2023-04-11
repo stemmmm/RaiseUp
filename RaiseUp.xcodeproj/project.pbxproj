@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		7B8013CA29CBECD100A8CEAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8013C929CBECD100A8CEAD /* AppDelegate.swift */; };
-		7B8013CC29CBECD100A8CEAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8013CB29CBECD100A8CEAD /* SceneDelegate.swift */; };
-		7B8013CE29CBECD100A8CEAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8013CD29CBECD100A8CEAD /* ViewController.swift */; };
 		7B8013D329CBECD200A8CEAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B8013D229CBECD200A8CEAD /* Assets.xcassets */; };
 		7B8013D629CBECD200A8CEAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B8013D429CBECD200A8CEAD /* LaunchScreen.storyboard */; };
-		7B8013E129CBECD200A8CEAD /* RaiseUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8013E029CBECD200A8CEAD /* RaiseUpTests.swift */; };
-		7B8013EB29CBECD200A8CEAD /* RaiseUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8013EA29CBECD200A8CEAD /* RaiseUpUITests.swift */; };
-		7B8013ED29CBECD200A8CEAD /* RaiseUpUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8013EC29CBECD200A8CEAD /* RaiseUpUITestsLaunchTests.swift */; };
+		7BDA07FC29E422830070B5E3 /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDA07FB29E422830070B5E3 /* Campaign.swift */; };
+		7BDA07FE29E424EE0070B5E3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDA07FD29E424EE0070B5E3 /* User.swift */; };
+		7BDA080429E42AB80070B5E3 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 7BDA080329E42AB80070B5E3 /* RxBlocking */; };
+		7BDA080629E42AB80070B5E3 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 7BDA080529E42AB80070B5E3 /* RxCocoa */; };
+		7BDA080829E42AB80070B5E3 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 7BDA080729E42AB80070B5E3 /* RxRelay */; };
+		7BDA080A29E42AB80070B5E3 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7BDA080929E42AB80070B5E3 /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,16 +38,13 @@
 /* Begin PBXFileReference section */
 		7B8013C629CBECD100A8CEAD /* RaiseUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaiseUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8013C929CBECD100A8CEAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7B8013CB29CBECD100A8CEAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7B8013CD29CBECD100A8CEAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7B8013D229CBECD200A8CEAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B8013D529CBECD200A8CEAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B8013D729CBECD200A8CEAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B8013DC29CBECD200A8CEAD /* RaiseUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaiseUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B8013E029CBECD200A8CEAD /* RaiseUpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaiseUpTests.swift; sourceTree = "<group>"; };
 		7B8013E629CBECD200A8CEAD /* RaiseUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaiseUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B8013EA29CBECD200A8CEAD /* RaiseUpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaiseUpUITests.swift; sourceTree = "<group>"; };
-		7B8013EC29CBECD200A8CEAD /* RaiseUpUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaiseUpUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7BDA07FB29E422830070B5E3 /* Campaign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Campaign.swift; sourceTree = "<group>"; };
+		7BDA07FD29E424EE0070B5E3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +52,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BDA080829E42AB80070B5E3 /* RxRelay in Frameworks */,
+				7BDA080629E42AB80070B5E3 /* RxCocoa in Frameworks */,
+				7BDA080A29E42AB80070B5E3 /* RxSwift in Frameworks */,
+				7BDA080429E42AB80070B5E3 /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,8 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				7B8013C829CBECD100A8CEAD /* RaiseUp */,
-				7B8013FB29CBF22400A8CEAD /* Resources */,
-				7B8013FA29CBF03500A8CEAD /* Tests */,
 				7B8013C729CBECD100A8CEAD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,37 +97,11 @@
 		7B8013C829CBECD100A8CEAD /* RaiseUp */ = {
 			isa = PBXGroup;
 			children = (
-				7B8013C929CBECD100A8CEAD /* AppDelegate.swift */,
-				7B8013CB29CBECD100A8CEAD /* SceneDelegate.swift */,
-				7B8013CD29CBECD100A8CEAD /* ViewController.swift */,
+				7BDA07F229E4211A0070B5E3 /* Application */,
+				7BDA07FA29E4226D0070B5E3 /* Model */,
+				7B8013FB29CBF22400A8CEAD /* Resources */,
 			);
 			path = RaiseUp;
-			sourceTree = "<group>";
-		};
-		7B8013DF29CBECD200A8CEAD /* RaiseUpTests */ = {
-			isa = PBXGroup;
-			children = (
-				7B8013E029CBECD200A8CEAD /* RaiseUpTests.swift */,
-			);
-			path = RaiseUpTests;
-			sourceTree = "<group>";
-		};
-		7B8013E929CBECD200A8CEAD /* RaiseUpUITests */ = {
-			isa = PBXGroup;
-			children = (
-				7B8013EA29CBECD200A8CEAD /* RaiseUpUITests.swift */,
-				7B8013EC29CBECD200A8CEAD /* RaiseUpUITestsLaunchTests.swift */,
-			);
-			path = RaiseUpUITests;
-			sourceTree = "<group>";
-		};
-		7B8013FA29CBF03500A8CEAD /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				7B8013DF29CBECD200A8CEAD /* RaiseUpTests */,
-				7B8013E929CBECD200A8CEAD /* RaiseUpUITests */,
-			);
-			path = Tests;
 			sourceTree = "<group>";
 		};
 		7B8013FB29CBF22400A8CEAD /* Resources */ = {
@@ -138,6 +112,23 @@
 				7B8013D729CBECD200A8CEAD /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		7BDA07F229E4211A0070B5E3 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				7B8013C929CBECD100A8CEAD /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		7BDA07FA29E4226D0070B5E3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7BDA07FB29E422830070B5E3 /* Campaign.swift */,
+				7BDA07FD29E424EE0070B5E3 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +147,12 @@
 			dependencies = (
 			);
 			name = RaiseUp;
+			packageProductDependencies = (
+				7BDA080329E42AB80070B5E3 /* RxBlocking */,
+				7BDA080529E42AB80070B5E3 /* RxCocoa */,
+				7BDA080729E42AB80070B5E3 /* RxRelay */,
+				7BDA080929E42AB80070B5E3 /* RxSwift */,
+			);
 			productName = RaiseUp;
 			productReference = 7B8013C629CBECD100A8CEAD /* RaiseUp.app */;
 			productType = "com.apple.product-type.application";
@@ -228,6 +225,9 @@
 				Base,
 			);
 			mainGroup = 7B8013BD29CBECD100A8CEAD;
+			packageReferences = (
+				7BDA080229E42AB80070B5E3 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 7B8013C729CBECD100A8CEAD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -270,9 +270,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B8013CE29CBECD100A8CEAD /* ViewController.swift in Sources */,
 				7B8013CA29CBECD100A8CEAD /* AppDelegate.swift in Sources */,
-				7B8013CC29CBECD100A8CEAD /* SceneDelegate.swift in Sources */,
+				7BDA07FC29E422830070B5E3 /* Campaign.swift in Sources */,
+				7BDA07FE29E424EE0070B5E3 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +280,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B8013E129CBECD200A8CEAD /* RaiseUpTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,8 +287,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B8013ED29CBECD200A8CEAD /* RaiseUpUITestsLaunchTests.swift in Sources */,
-				7B8013EB29CBECD200A8CEAD /* RaiseUpUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,7 +440,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K9M6C75JFU;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RaiseUp/Info.plist;
+				INFOPLIST_FILE = RaiseUp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -470,7 +467,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K9M6C75JFU;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RaiseUp/Info.plist;
+				INFOPLIST_FILE = RaiseUp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -604,6 +601,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7BDA080229E42AB80070B5E3 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7BDA080329E42AB80070B5E3 /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7BDA080229E42AB80070B5E3 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		7BDA080529E42AB80070B5E3 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7BDA080229E42AB80070B5E3 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		7BDA080729E42AB80070B5E3 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7BDA080229E42AB80070B5E3 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		7BDA080929E42AB80070B5E3 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7BDA080229E42AB80070B5E3 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7B8013BE29CBECD100A8CEAD /* Project object */;
 }
