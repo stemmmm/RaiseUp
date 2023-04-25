@@ -10,6 +10,11 @@
 		7B8013CA29CBECD100A8CEAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8013C929CBECD100A8CEAD /* AppDelegate.swift */; };
 		7B8013D329CBECD200A8CEAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B8013D229CBECD200A8CEAD /* Assets.xcassets */; };
 		7B8013D629CBECD200A8CEAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B8013D429CBECD200A8CEAD /* LaunchScreen.storyboard */; };
+		7B8BD1FA29F7AFA000E936B2 /* CampaignListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD1F929F7AFA000E936B2 /* CampaignListViewController.swift */; };
+		7B8BD1FC29F7AFBE00E936B2 /* CampaignDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD1FB29F7AFBE00E936B2 /* CampaignDetailViewController.swift */; };
+		7B8BD1FE29F7AFD500E936B2 /* CampaignCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD1FD29F7AFD500E936B2 /* CampaignCreateViewController.swift */; };
+		7B8BD20029F7AFE700E936B2 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD1FF29F7AFE700E936B2 /* MyPageViewController.swift */; };
+		7B8BD20229F7C30E00E936B2 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD20129F7C30E00E936B2 /* App.swift */; };
 		7BDA07FC29E422830070B5E3 /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDA07FB29E422830070B5E3 /* Campaign.swift */; };
 		7BDA07FE29E424EE0070B5E3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDA07FD29E424EE0070B5E3 /* User.swift */; };
 		7BDA080429E42AB80070B5E3 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 7BDA080329E42AB80070B5E3 /* RxBlocking */; };
@@ -43,6 +48,11 @@
 		7B8013D729CBECD200A8CEAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B8013DC29CBECD200A8CEAD /* RaiseUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaiseUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8013E629CBECD200A8CEAD /* RaiseUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaiseUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B8BD1F929F7AFA000E936B2 /* CampaignListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignListViewController.swift; sourceTree = "<group>"; };
+		7B8BD1FB29F7AFBE00E936B2 /* CampaignDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignDetailViewController.swift; sourceTree = "<group>"; };
+		7B8BD1FD29F7AFD500E936B2 /* CampaignCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignCreateViewController.swift; sourceTree = "<group>"; };
+		7B8BD1FF29F7AFE700E936B2 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		7B8BD20129F7C30E00E936B2 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		7BDA07FB29E422830070B5E3 /* Campaign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Campaign.swift; sourceTree = "<group>"; };
 		7BDA07FD29E424EE0070B5E3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +109,7 @@
 			children = (
 				7BDA07F229E4211A0070B5E3 /* Application */,
 				7BDA07FA29E4226D0070B5E3 /* Model */,
+				7B8BD1F829F7AEE500E936B2 /* ViewControllers */,
 				7B8013FB29CBF22400A8CEAD /* Resources */,
 			);
 			path = RaiseUp;
@@ -114,10 +125,22 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		7B8BD1F829F7AEE500E936B2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7B8BD1F929F7AFA000E936B2 /* CampaignListViewController.swift */,
+				7B8BD1FB29F7AFBE00E936B2 /* CampaignDetailViewController.swift */,
+				7B8BD1FD29F7AFD500E936B2 /* CampaignCreateViewController.swift */,
+				7B8BD1FF29F7AFE700E936B2 /* MyPageViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		7BDA07F229E4211A0070B5E3 /* Application */ = {
 			isa = PBXGroup;
 			children = (
 				7B8013C929CBECD100A8CEAD /* AppDelegate.swift */,
+				7B8BD20129F7C30E00E936B2 /* App.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -270,9 +293,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B8BD1FA29F7AFA000E936B2 /* CampaignListViewController.swift in Sources */,
 				7B8013CA29CBECD100A8CEAD /* AppDelegate.swift in Sources */,
+				7B8BD20029F7AFE700E936B2 /* MyPageViewController.swift in Sources */,
 				7BDA07FC29E422830070B5E3 /* Campaign.swift in Sources */,
 				7BDA07FE29E424EE0070B5E3 /* User.swift in Sources */,
+				7B8BD1FE29F7AFD500E936B2 /* CampaignCreateViewController.swift in Sources */,
+				7B8BD1FC29F7AFBE00E936B2 /* CampaignDetailViewController.swift in Sources */,
+				7B8BD20229F7C30E00E936B2 /* App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
