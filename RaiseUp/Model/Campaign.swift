@@ -8,24 +8,63 @@
 import UIKit
 
 struct Campaign {
-    enum Category {
-        case medical
-        case education
-        case business
-        case social
-        case art
-        case personal
-        case community
+    enum Category: String {
+        case medical = "의료"
+        case education = "교육"
+        case business = "비즈니스"
+        case social = "사회"
+        case art = "예술"
+        case personal = "개인"
+        case community = "커뮤니티"
     }
     
-    let id: UUID
+    let id = UUID()
+    let createdAt = Date()
+    
     let title: String
     let category: Category
-    let images: [UIImage]
+    let images: [UIImage]?
     let deadline: Date
     let targetAmount: String
     let currentAmount: String
     let content: String
     let creator: User
-    let createdAt: Date
+    
+    init(
+        title: String,
+        category: Category,
+        images: [UIImage]? = nil,
+        deadline: Date,
+        targetAmount: String,
+        currentAmount: String,
+        content: String,
+        creator: User
+    ) {
+        self.title = title
+        self.category = category
+        self.images = images
+        self.deadline = deadline
+        self.targetAmount = targetAmount
+        self.currentAmount = currentAmount
+        self.content = content
+        self.creator = creator
+    }
 }
+
+extension Campaign {
+    var leftdays: Int {
+        let components = Calendar.current.dateComponents([.day], from: Date(), to: deadline)
+        return components.day ?? 0
+    }
+    
+    /// progressView에 전달하는 값
+    var progress: Float {
+        guard let target = Float(targetAmount), let current = Float(currentAmount) else { return 0 }
+        return current / target
+    }
+    
+    var percentage: Int {
+        Int(progress * 100)
+    }
+}
+

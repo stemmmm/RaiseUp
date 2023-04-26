@@ -8,16 +8,25 @@
 import Foundation
 
 struct User {
-    enum UserType {
-        case sponser
-        case receiver
-    }
+    let id = UUID()
     
-    let id: UUID
     let email: String
     let password: String
     let name: String
+    let campaigns: [Campaign]?
+    let favoriteCampaigns: [Campaign]?
     
-    let campaigns: [Campaign]
-    let favoriteCampaigns: [Campaign]
+    init(
+        email: String,
+        password: String,
+        name: String,
+        campaigns: [Campaign]? = nil,
+        favoriteCampaigns: [Campaign]? = nil
+    ) {
+        self.email = email
+        self.password = password
+        self.name = name
+        self.campaigns = campaigns
+        self.favoriteCampaigns = favoriteCampaigns
+    }
 }
