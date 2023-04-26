@@ -8,7 +8,7 @@
 import UIKit
 
 final class CampaignListViewController: UITableViewController {
-
+    
     private let viewModel = CampaignListViewModel()
     
     override func viewDidLoad() {
@@ -16,7 +16,27 @@ final class CampaignListViewController: UITableViewController {
         
         // MARK: Registration
         tableView.register(CampaignTableViewCell.self, forCellReuseIdentifier: CampaignTableViewCell.reuseIdentifier)
+        
+        // MARK: Navigation item
+        setupNavigationItems()
     }
+    
+    private func setupNavigationItems() {
+        let logoButton = UIBarButtonItem.create(image: UIImage(named: "logo.black"), target: self, action: #selector(logoButtonTapped))
+        let searchButton = UIBarButtonItem.create(image: UIImage(systemName: "magnifyingglass"), target: self, action: #selector(searchButtonTapped))
+        let filterButton = UIBarButtonItem.create(image: UIImage(systemName: "slider.horizontal.3"), target: self, action: #selector(filterButtonTapped))
+        let notificationButton = UIBarButtonItem.create(image: UIImage(systemName: "bell"), target: self, action: #selector(notificationButtonTapped))
+        navigationItem.leftBarButtonItem = logoButton
+        navigationItem.rightBarButtonItems = [notificationButton, filterButton, searchButton]
+    }
+    
+    @objc private func logoButtonTapped() { }
+    
+    @objc private func searchButtonTapped() { }
+    
+    @objc private func filterButtonTapped() { }
+    
+    @objc private func notificationButtonTapped() { }
 }
 
 // MARK: - Data source
