@@ -21,6 +21,7 @@
 		7B8BD20E29F7E5E500E936B2 /* LayoutConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD20D29F7E5E500E936B2 /* LayoutConstants.swift */; };
 		7B8BD21029F7E9F500E936B2 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD20F29F7E9F500E936B2 /* UIImageView+.swift */; };
 		7B8BD21229F7EA0500E936B2 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD21129F7EA0500E936B2 /* UIStackView+.swift */; };
+		7BB1A9DC29F8DDBD005CB61D /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB1A9DB29F8DDBD005CB61D /* NSObject+.swift */; };
 		7BDA07FC29E422830070B5E3 /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDA07FB29E422830070B5E3 /* Campaign.swift */; };
 		7BDA07FE29E424EE0070B5E3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDA07FD29E424EE0070B5E3 /* User.swift */; };
 		7BDA080429E42AB80070B5E3 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 7BDA080329E42AB80070B5E3 /* RxBlocking */; };
@@ -65,6 +66,7 @@
 		7B8BD20D29F7E5E500E936B2 /* LayoutConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutConstants.swift; sourceTree = "<group>"; };
 		7B8BD20F29F7E9F500E936B2 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		7B8BD21129F7EA0500E936B2 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
+		7BB1A9DB29F8DDBD005CB61D /* NSObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
 		7BDA07FB29E422830070B5E3 /* Campaign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Campaign.swift; sourceTree = "<group>"; };
 		7BDA07FD29E424EE0070B5E3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,6 +173,7 @@
 		7B8BD20929F7E3FB00E936B2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				7BB1A9DB29F8DDBD005CB61D /* NSObject+.swift */,
 				7B8BD20A29F7E41400E936B2 /* UILabel+.swift */,
 				7B8BD20F29F7E9F500E936B2 /* UIImageView+.swift */,
 				7B8BD21129F7EA0500E936B2 /* UIStackView+.swift */,
@@ -355,6 +358,7 @@
 				7B8BD20529F7C8F200E936B2 /* CampaignListViewModel.swift in Sources */,
 				7B8BD1FE29F7AFD500E936B2 /* CampaignCreateViewController.swift in Sources */,
 				7B8BD20B29F7E41400E936B2 /* UILabel+.swift in Sources */,
+				7BB1A9DC29F8DDBD005CB61D /* NSObject+.swift in Sources */,
 				7B8BD1FC29F7AFBE00E936B2 /* CampaignDetailViewController.swift in Sources */,
 				7B8BD20229F7C30E00E936B2 /* App.swift in Sources */,
 			);
