@@ -59,3 +59,8 @@ extension CampaignListViewController {
         return cell
     }
 }
+
+// MARK: - Delegate
+extension CampaignListViewController {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat { LayoutConstants.cellHeight }
+}

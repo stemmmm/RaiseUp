@@ -13,4 +13,5 @@ enum LayoutConstants {
     static let six: CGFloat = 6
     static let thumbnailImageViewWidth: CGFloat = 108
     static let thumbnailImageViewHeight: CGFloat = 108
+    static let cellHeight: CGFloat = 140
 }

@@ -68,7 +68,7 @@ final class CampaignTableViewCell: UITableViewCell {
             mainStackView.leadingAnchor.constraint(equalTo: thumbnailImageView.trailingAnchor, constant: LayoutConstants.ten),
             mainStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -LayoutConstants.sixteen),
             
-            progressView.bottomAnchor.constraint(equalTo: thumbnailImageView.bottomAnchor, constant: -LayoutConstants.six),
+            progressView.bottomAnchor.constraint(equalTo: thumbnailImageView.bottomAnchor),
             progressView.leadingAnchor.constraint(equalTo: mainStackView.leadingAnchor),
             progressView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -LayoutConstants.sixteen)
         ])
