@@ -7,11 +7,10 @@
 
 import UIKit
 
-class MyPageViewController: UIViewController {
+final class MyPageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .green
     }
 
 }

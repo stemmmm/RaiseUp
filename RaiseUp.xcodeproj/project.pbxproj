@@ -15,6 +15,12 @@
 		7B8BD1FE29F7AFD500E936B2 /* CampaignCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD1FD29F7AFD500E936B2 /* CampaignCreateViewController.swift */; };
 		7B8BD20029F7AFE700E936B2 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD1FF29F7AFE700E936B2 /* MyPageViewController.swift */; };
 		7B8BD20229F7C30E00E936B2 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD20129F7C30E00E936B2 /* App.swift */; };
+		7B8BD20529F7C8F200E936B2 /* CampaignListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD20429F7C8F200E936B2 /* CampaignListViewModel.swift */; };
+		7B8BD20829F7CF7900E936B2 /* CampaignTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD20729F7CF7900E936B2 /* CampaignTableViewCell.swift */; };
+		7B8BD20B29F7E41400E936B2 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD20A29F7E41400E936B2 /* UILabel+.swift */; };
+		7B8BD20E29F7E5E500E936B2 /* LayoutConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD20D29F7E5E500E936B2 /* LayoutConstants.swift */; };
+		7B8BD21029F7E9F500E936B2 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD20F29F7E9F500E936B2 /* UIImageView+.swift */; };
+		7B8BD21229F7EA0500E936B2 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD21129F7EA0500E936B2 /* UIStackView+.swift */; };
 		7BDA07FC29E422830070B5E3 /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDA07FB29E422830070B5E3 /* Campaign.swift */; };
 		7BDA07FE29E424EE0070B5E3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDA07FD29E424EE0070B5E3 /* User.swift */; };
 		7BDA080429E42AB80070B5E3 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 7BDA080329E42AB80070B5E3 /* RxBlocking */; };
@@ -53,6 +59,12 @@
 		7B8BD1FD29F7AFD500E936B2 /* CampaignCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignCreateViewController.swift; sourceTree = "<group>"; };
 		7B8BD1FF29F7AFE700E936B2 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		7B8BD20129F7C30E00E936B2 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		7B8BD20429F7C8F200E936B2 /* CampaignListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignListViewModel.swift; sourceTree = "<group>"; };
+		7B8BD20729F7CF7900E936B2 /* CampaignTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignTableViewCell.swift; sourceTree = "<group>"; };
+		7B8BD20A29F7E41400E936B2 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
+		7B8BD20D29F7E5E500E936B2 /* LayoutConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutConstants.swift; sourceTree = "<group>"; };
+		7B8BD20F29F7E9F500E936B2 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
+		7B8BD21129F7EA0500E936B2 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
 		7BDA07FB29E422830070B5E3 /* Campaign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Campaign.swift; sourceTree = "<group>"; };
 		7BDA07FD29E424EE0070B5E3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,7 +121,10 @@
 			children = (
 				7BDA07F229E4211A0070B5E3 /* Application */,
 				7BDA07FA29E4226D0070B5E3 /* Model */,
+				7B8BD20329F7C8D800E936B2 /* ViewModel */,
 				7B8BD1F829F7AEE500E936B2 /* ViewControllers */,
+				7B8BD20929F7E3FB00E936B2 /* Extensions */,
+				7B8BD20C29F7E5CC00E936B2 /* Constants */,
 				7B8013FB29CBF22400A8CEAD /* Resources */,
 			);
 			path = RaiseUp;
@@ -128,12 +143,47 @@
 		7B8BD1F829F7AEE500E936B2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				7B8BD1F929F7AFA000E936B2 /* CampaignListViewController.swift */,
+				7B8BD20629F7CF5300E936B2 /* CampaignList */,
 				7B8BD1FB29F7AFBE00E936B2 /* CampaignDetailViewController.swift */,
 				7B8BD1FD29F7AFD500E936B2 /* CampaignCreateViewController.swift */,
 				7B8BD1FF29F7AFE700E936B2 /* MyPageViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7B8BD20329F7C8D800E936B2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7B8BD20429F7C8F200E936B2 /* CampaignListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7B8BD20629F7CF5300E936B2 /* CampaignList */ = {
+			isa = PBXGroup;
+			children = (
+				7B8BD1F929F7AFA000E936B2 /* CampaignListViewController.swift */,
+				7B8BD20729F7CF7900E936B2 /* CampaignTableViewCell.swift */,
+			);
+			path = CampaignList;
+			sourceTree = "<group>";
+		};
+		7B8BD20929F7E3FB00E936B2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7B8BD20A29F7E41400E936B2 /* UILabel+.swift */,
+				7B8BD20F29F7E9F500E936B2 /* UIImageView+.swift */,
+				7B8BD21129F7EA0500E936B2 /* UIStackView+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7B8BD20C29F7E5CC00E936B2 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				7B8BD20D29F7E5E500E936B2 /* LayoutConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		7BDA07F229E4211A0070B5E3 /* Application */ = {
@@ -296,9 +346,15 @@
 				7B8BD1FA29F7AFA000E936B2 /* CampaignListViewController.swift in Sources */,
 				7B8013CA29CBECD100A8CEAD /* AppDelegate.swift in Sources */,
 				7B8BD20029F7AFE700E936B2 /* MyPageViewController.swift in Sources */,
+				7B8BD21029F7E9F500E936B2 /* UIImageView+.swift in Sources */,
+				7B8BD20E29F7E5E500E936B2 /* LayoutConstants.swift in Sources */,
+				7B8BD20829F7CF7900E936B2 /* CampaignTableViewCell.swift in Sources */,
 				7BDA07FC29E422830070B5E3 /* Campaign.swift in Sources */,
+				7B8BD21229F7EA0500E936B2 /* UIStackView+.swift in Sources */,
 				7BDA07FE29E424EE0070B5E3 /* User.swift in Sources */,
+				7B8BD20529F7C8F200E936B2 /* CampaignListViewModel.swift in Sources */,
 				7B8BD1FE29F7AFD500E936B2 /* CampaignCreateViewController.swift in Sources */,
+				7B8BD20B29F7E41400E936B2 /* UILabel+.swift in Sources */,
 				7B8BD1FC29F7AFBE00E936B2 /* CampaignDetailViewController.swift in Sources */,
 				7B8BD20229F7C30E00E936B2 /* App.swift in Sources */,
 			);

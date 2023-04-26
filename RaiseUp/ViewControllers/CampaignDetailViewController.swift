@@ -7,11 +7,10 @@
 
 import UIKit
 
-class CampaignDetailViewController: UIViewController {
+final class CampaignDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .red
     }
 
 }
