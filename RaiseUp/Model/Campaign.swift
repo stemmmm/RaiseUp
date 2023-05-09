@@ -18,12 +18,11 @@ struct Campaign {
         case community = "커뮤니티"
     }
     
-    let id = UUID()
-    let createdAt = Date()
-    
+    let id: UUID
+    let createdAt: Date
     let title: String
     let category: Category
-    let images: [UIImage]?
+    let images: [String]?
     let deadline: Date
     let targetAmount: String
     let currentAmount: String
@@ -31,15 +30,19 @@ struct Campaign {
     let creator: User
     
     init(
+        id: UUID = UUID(),
+        createdAt: Date = Date(),
         title: String,
         category: Category,
-        images: [UIImage]? = nil,
+        images: [String]? = nil,
         deadline: Date,
         targetAmount: String,
         currentAmount: String,
         content: String,
         creator: User
     ) {
+        self.id = id
+        self.createdAt = createdAt
         self.title = title
         self.category = category
         self.images = images
@@ -59,12 +62,13 @@ extension Campaign {
     
     /// progressView에 전달하는 값
     var progress: Float {
-        guard let target = Float(targetAmount), let current = Float(currentAmount) else { return 0 }
+        guard let target = Float(targetAmount),
+                let current = Float(currentAmount) else { return 0 }
         return current / target
     }
     
-    var percentage: Int {
-        Int(progress * 100)
-    }
+    var percentage: Int { Int(progress * 100) }
 }
 
+extension Campaign: Codable { }
+extension Campaign.Category: Codable { }

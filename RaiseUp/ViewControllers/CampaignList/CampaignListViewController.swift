@@ -49,7 +49,7 @@ extension CampaignListViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CampaignTableViewCell.reuseIdentifier, for: indexPath) as? CampaignTableViewCell else { return UITableViewCell() }
         
         let campaign = viewModel.campaigns[indexPath.row]
-        cell.thumbnailImageView.image = campaign.images?.first
+//        cell.thumbnailImageView.image = campaign.images?.first
         cell.titleLabel.text = campaign.title
         cell.categoryLabel.text = campaign.category.rawValue
         cell.percentageLabel.text = "\(campaign.percentage)%"

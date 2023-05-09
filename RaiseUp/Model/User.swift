@@ -8,7 +8,7 @@
 import Foundation
 
 struct User {
-    let id = UUID()
+    let id: UUID
     
     let email: String
     let password: String
@@ -17,12 +17,14 @@ struct User {
     let favoriteCampaigns: [Campaign]?
     
     init(
+        id: UUID = UUID(),
         email: String,
         password: String,
         name: String,
         campaigns: [Campaign]? = nil,
         favoriteCampaigns: [Campaign]? = nil
     ) {
+        self.id = id
         self.email = email
         self.password = password
         self.name = name
@@ -30,3 +32,5 @@ struct User {
         self.favoriteCampaigns = favoriteCampaigns
     }
 }
+
+extension User: Codable { }
