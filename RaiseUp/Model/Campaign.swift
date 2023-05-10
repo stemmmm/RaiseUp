@@ -5,7 +5,7 @@
 //  Created by 정호윤 on 2023/04/10.
 //
 
-import UIKit
+import Foundation
 
 struct Campaign {
     enum Category: String {
