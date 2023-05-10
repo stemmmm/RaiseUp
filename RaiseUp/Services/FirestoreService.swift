@@ -8,29 +8,43 @@
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
-protocol FireStoreServiceProtocol {
-    func fetchCampaigns() async throws -> [Campaign]
-    func saveCampaign(_ campaign: Campaign, completion: @escaping ((Result<Void, Error>) -> Void))
+enum FirestoreError: Error {
+    case unknown
+    case encodingError
+    case decodingError
 }
 
-final class FirestoreService: FireStoreServiceProtocol {
+enum FirestoreCollection: String {
+    case campaigns
+}
+
+final class FirestoreService: DatabaseServiceType {
     private let db = Firestore.firestore()
-    private let campaignsCollection = "campaigns"
     
-    func fetchCampaigns() async throws -> [Campaign] {
-        let snapshot = try await db.collection(campaignsCollection).getDocuments()
-        return try snapshot.documents.compactMap { try $0.data(as: Campaign.self) }
+    func fetchDocuments<T: Decodable>(from collection: String, completion: @escaping ((Result<[T], Error>) -> Void)) {
+        db.collection(collection).getDocuments { snapshot, error in
+            if let error {
+                completion(.failure(error))
+            } else {
+                do {
+                    let documents = try snapshot?.documents.compactMap { try $0.data(as: T.self) }
+                    completion(.success(documents ?? []))
+                } catch {
+                    completion(.failure(FirestoreError.decodingError))
+                }
+            }
+        }
     }
     
-    func saveCampaign(_ campaign: Campaign, completion: @escaping ((Result<Void, Error>) -> Void)) {
-        let documentReference = db.collection(campaignsCollection).document()
+    func saveDocuments<T: Encodable>(_ document: T, id: String, to collection: String, completion: @escaping ((Result<Void, Error>) -> Void)) {
+        let documentReference = db.collection(collection).document(id)
         do {
-            try documentReference.setData(from: campaign) { error in
-                if let error { completion(.failure(error)) }
+            try documentReference.setData(from: document) { error in
+                if error != nil { completion(.failure(FirestoreError.encodingError)) }
                 else { completion(.success(())) }
             }
         } catch {
-            completion(.failure(error))
+            completion(.failure(FirestoreError.encodingError))
         }
     }
 }
