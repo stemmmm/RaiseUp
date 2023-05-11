@@ -11,18 +11,26 @@ final class CampaignListViewController: UITableViewController {
     
     private let viewModel = CampaignListViewModel(databaseService: FirestoreService())
     
+    private let loadingIndicator = UIActivityIndicatorView(style: .large)
+    private let refreshController = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // MARK: Registration
         tableView.register(CampaignTableViewCell.self, forCellReuseIdentifier: CampaignTableViewCell.reuseIdentifier)
         
-        // MARK: Navigation item
         setupNavigationItems()
+        setupLoadingIndicator()
+        setupRefreshControl()
         
-        // MARK: 캠페인
         viewModel.fetchCampaigns()
-        viewModel.onCampaignsUpdated = { [weak self] in DispatchQueue.main.async { self?.tableView.reloadData() } }
+        viewModel.onCampaignsUpdated = { [weak self] in
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+                self?.loadingIndicator.stopAnimating()
+                self?.refreshController.endRefreshing()
+            }
+        }
     }
     
     private func setupNavigationItems() {
@@ -34,6 +42,23 @@ final class CampaignListViewController: UITableViewController {
         navigationItem.rightBarButtonItems = [notificationButton, filterButton, searchButton]
     }
     
+    private func setupLoadingIndicator() {
+        loadingIndicator.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(loadingIndicator)
+        
+        NSLayoutConstraint.activate([
+            loadingIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loadingIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -100)
+        ])
+        
+        loadingIndicator.startAnimating()
+    }
+    
+    private func setupRefreshControl() {
+        refreshController.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+        tableView.refreshControl = refreshController
+    }
+    
     @objc private func logoButtonTapped() { }
     
     @objc private func searchButtonTapped() { }
@@ -41,6 +66,8 @@ final class CampaignListViewController: UITableViewController {
     @objc private func filterButtonTapped() { }
     
     @objc private func notificationButtonTapped() { }
+    
+    @objc private func refreshData() { viewModel.fetchCampaigns() }
 }
 
 // MARK: - Data source
