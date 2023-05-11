@@ -21,7 +21,10 @@ enum FirestoreCollection: String {
 final class FirestoreService: DatabaseServiceType {
     private let db = Firestore.firestore()
     
-    func fetchDocuments<T: Decodable>(from collection: String, completion: @escaping ((Result<[T], Error>) -> Void)) {
+    func fetchDocuments<T: Decodable>(
+        from collection: String,
+        completion: @escaping ((Result<[T], Error>) -> Void)
+    ) {
         db.collection(collection).getDocuments { snapshot, error in
             if let error {
                 completion(.failure(error))
@@ -36,7 +39,12 @@ final class FirestoreService: DatabaseServiceType {
         }
     }
     
-    func saveDocuments<T: Encodable>(_ document: T, id: String, to collection: String, completion: @escaping ((Result<Void, Error>) -> Void)) {
+    func saveDocuments<T: Encodable>(
+        _ document: T,
+        id: String,
+        to collection: String,
+        completion: @escaping ((Result<Void, Error>) -> Void)
+    ) {
         let documentReference = db.collection(collection).document(id)
         do {
             try documentReference.setData(from: document) { error in
