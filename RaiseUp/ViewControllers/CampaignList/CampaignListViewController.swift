@@ -9,7 +9,7 @@ import UIKit
 
 final class CampaignListViewController: UITableViewController {
     
-    private let viewModel = CampaignListViewModel()
+    private let viewModel = CampaignListViewModel(firestoreService: FirestoreService())
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +19,10 @@ final class CampaignListViewController: UITableViewController {
         
         // MARK: Navigation item
         setupNavigationItems()
+        
+        // MARK: 캠페인
+        viewModel.fetchCampaigns()
+        viewModel.onCampaignsUpdated = { [weak self] in DispatchQueue.main.async { self?.tableView.reloadData() } }
     }
     
     private func setupNavigationItems() {
@@ -41,15 +45,13 @@ final class CampaignListViewController: UITableViewController {
 
 // MARK: - Data source
 extension CampaignListViewController {
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.campaigns.count
-    }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { viewModel.campaigns.count }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CampaignTableViewCell.reuseIdentifier, for: indexPath) as? CampaignTableViewCell else { return UITableViewCell() }
         
         let campaign = viewModel.campaigns[indexPath.row]
-//        cell.thumbnailImageView.image = campaign.images?.first
+        // TODO: 이미지 처리
         cell.titleLabel.text = campaign.title
         cell.categoryLabel.text = campaign.category.rawValue
         cell.percentageLabel.text = "\(campaign.percentage)%"
