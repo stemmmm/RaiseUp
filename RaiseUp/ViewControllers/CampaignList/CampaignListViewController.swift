@@ -9,7 +9,7 @@ import UIKit
 
 final class CampaignListViewController: UITableViewController {
     
-    private let viewModel = CampaignListViewModel(firestoreService: FirestoreService())
+    private let viewModel = CampaignListViewModel(databaseService: FirestoreService())
     
     override func viewDidLoad() {
         super.viewDidLoad()

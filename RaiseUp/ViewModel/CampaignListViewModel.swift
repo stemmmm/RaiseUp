@@ -9,18 +9,18 @@ import UIKit
 
 final class CampaignListViewModel {
     private let user: User
-    private let firestoreService: DatabaseServiceType
+    private let databaseService: DatabaseServiceType
     private(set) var campaigns: [Campaign] = []
     
     var onCampaignsUpdated: (() -> Void)?
     
-    init(user: User = User(email: "email", password: "1234", name: "name"), firestoreService: DatabaseServiceType) {
+    init(user: User = User(email: "email", password: "1234", name: "name"), databaseService: DatabaseServiceType) {
         self.user = user
-        self.firestoreService = firestoreService
+        self.databaseService = databaseService
     }
     
     func fetchCampaigns() {
-        firestoreService.fetchDocuments(from: FirestoreCollection.campaigns.rawValue) { [weak self] (result: Result<[Campaign], Error>) in
+        databaseService.fetchDocuments(from: FirestoreCollection.campaigns.rawValue) { [weak self] (result: Result<[Campaign], Error>) in
             switch result {
             case .success(let campaigns):
                 self?.campaigns = campaigns
@@ -34,6 +34,6 @@ final class CampaignListViewModel {
     
     func saveCampaign(_ campaign: Campaign, id: String?, completion: @escaping ((Result<Void, Error>) -> Void)) {
         let id = id ?? UUID().uuidString
-        firestoreService.saveDocuments(campaign, id: id, to: FirestoreCollection.campaigns.rawValue, completion: completion)
+        databaseService.saveDocuments(campaign, id: id, to: FirestoreCollection.campaigns.rawValue, completion: completion)
     }
 }
