@@ -39,18 +39,19 @@ struct App {
     
     static func createTabBarController() -> UITabBarController {
         let campaignListVC = CampaignListViewController()
-        let campaignNC = UINavigationController(rootViewController: campaignListVC)
-        campaignNC.tabBarItem = UITabBarItem(title: "홈", image: UIImage(systemName: "house"), tag: Tag.campaignList.rawValue)
+        let campaignListNC = UINavigationController(rootViewController: campaignListVC)
+        campaignListNC.tabBarItem = UITabBarItem(title: "홈", image: UIImage(systemName: "house"), tag: Tag.campaignList.rawValue)
         
         let campaignCreateVC = CampaignCreateViewController()
-        campaignCreateVC.tabBarItem = UITabBarItem(title: "캠페인 생성", image: UIImage(systemName: "plus.circle"), tag: Tag.campaignCreate.rawValue)
+        let campaignCreateNC = UINavigationController(rootViewController: campaignCreateVC)
+        campaignCreateNC.tabBarItem = UITabBarItem(title: "캠페인 생성", image: UIImage(systemName: "plus.circle"), tag: Tag.campaignCreate.rawValue)
         
         let myPageVC = MyPageViewController()
         let myPageNC = UINavigationController(rootViewController: myPageVC)
         myPageNC.tabBarItem = UITabBarItem(title: "마이페이지", image: UIImage(systemName: "person.circle"), tag: Tag.myPage.rawValue)
         
         let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [campaignNC, campaignCreateVC, myPageNC]
+        tabBarController.viewControllers = [campaignListNC, campaignCreateNC, myPageNC]
         
         return tabBarController
     }
