@@ -179,9 +179,9 @@
 			isa = PBXGroup;
 			children = (
 				7B8BD20629F7CF5300E936B2 /* CampaignList */,
-				7B8BD1FB29F7AFBE00E936B2 /* CampaignDetailViewController.swift */,
-				7B8BD1FD29F7AFD500E936B2 /* CampaignCreateViewController.swift */,
-				7B8BD1FF29F7AFE700E936B2 /* MyPageViewController.swift */,
+				7BE765402A173C2B0001C356 /* CampaignDetail */,
+				7BE7653F2A173C100001C356 /* CampaignCreate */,
+				7BE765412A173C3F0001C356 /* MyPage */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -240,6 +240,30 @@
 				7BDA07FD29E424EE0070B5E3 /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		7BE7653F2A173C100001C356 /* CampaignCreate */ = {
+			isa = PBXGroup;
+			children = (
+				7B8BD1FD29F7AFD500E936B2 /* CampaignCreateViewController.swift */,
+			);
+			path = CampaignCreate;
+			sourceTree = "<group>";
+		};
+		7BE765402A173C2B0001C356 /* CampaignDetail */ = {
+			isa = PBXGroup;
+			children = (
+				7B8BD1FB29F7AFBE00E936B2 /* CampaignDetailViewController.swift */,
+			);
+			path = CampaignDetail;
+			sourceTree = "<group>";
+		};
+		7BE765412A173C3F0001C356 /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				7B8BD1FF29F7AFE700E936B2 /* MyPageViewController.swift */,
+			);
+			path = MyPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
