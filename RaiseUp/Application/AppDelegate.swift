@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         if viewController.tabBarItem.tag == Tag.campaignCreate.rawValue {
-            let campaignCreateNC = UINavigationController(rootViewController: CampaignCreateViewController())
+            let campaignCreateNC = UINavigationController(rootViewController: CreateCampaignViewController())
             campaignCreateNC.modalPresentationStyle = .fullScreen
             tabBarController.present(campaignCreateNC, animated: true)
             return false

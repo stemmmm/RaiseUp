@@ -42,7 +42,7 @@ struct App {
         let campaignListNC = UINavigationController(rootViewController: campaignListVC)
         campaignListNC.tabBarItem = UITabBarItem(title: "홈", image: UIImage(systemName: "house"), tag: Tag.campaignList.rawValue)
         
-        let campaignCreateVC = CampaignCreateViewController()
+        let campaignCreateVC = CreateCampaignViewController()
         let campaignCreateNC = UINavigationController(rootViewController: campaignCreateVC)
         campaignCreateNC.tabBarItem = UITabBarItem(title: "캠페인 생성", image: UIImage(systemName: "plus.circle"), tag: Tag.campaignCreate.rawValue)
         
