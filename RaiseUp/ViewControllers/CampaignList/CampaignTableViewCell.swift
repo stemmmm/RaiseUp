@@ -10,7 +10,6 @@ import UIKit
 final class CampaignTableViewCell: UITableViewCell {
     
     let thumbnailImageView = UIImageView.create()
-    
     let titleLabel = UILabel.create(fontStyle: .body, textColor: .black)
     let categoryLabel = UILabel.create(fontStyle: .subheadline, textColor: .secondaryLabel)
     let percentageLabel = UILabel.create(fontStyle: .footnote, textColor: .systemGreen)
@@ -23,19 +22,19 @@ final class CampaignTableViewCell: UITableViewCell {
         return progressView
     }()
     
-    lazy var titleCategoryStackView = UIStackView.create(
+    private lazy var titleCategoryStackView = UIStackView.create(
         arrangedSubviews: [titleLabel, categoryLabel],
         axis: .vertical,
         spacing: 4
     )
     
-    lazy var percentageLeftDaysStackView = UIStackView.create(
+    private lazy var percentageLeftDaysStackView = UIStackView.create(
         arrangedSubviews: [percentageLabel, leftDaysLabel],
         axis: .horizontal,
         spacing: 4
     )
     
-    lazy var mainStackView = UIStackView.create(
+    private lazy var mainStackView = UIStackView.create(
         arrangedSubviews:  [titleCategoryStackView, percentageLeftDaysStackView],
         axis: .vertical,
         spacing: 16
