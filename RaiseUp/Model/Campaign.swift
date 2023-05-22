@@ -8,7 +8,7 @@
 import Foundation
 
 struct Campaign {
-    enum Category: String {
+    enum Category: String, CaseIterable {
         case medical = "의료"
         case education = "교육"
         case business = "비즈니스"
